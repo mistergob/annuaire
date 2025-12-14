@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Annuaire en ligne - Inscription</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-container">
+      <div class="brand">Annuaire Pro</div>
+      <nav class="nav-links">
+        <a href="index.html">Accueil</a>
+        <a class="active" href="inscription.html">Inscription</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container form-page">
+    <div>
+      <p class="eyebrow">Créer une annonce</p>
+      <h1>Inscrivez votre entreprise</h1>
+      <p class="lead">Remplissez le formulaire pour publier votre annonce avec toutes les informations essentielles.</p>
+    </div>
+
+    <form class="card form-card" aria-label="Formulaire de création d'annonce">
+      <div class="form-grid">
+        <label>Nom et prénom
+          <input type="text" name="fullname" placeholder="Ex : Marie Dupont" required>
+        </label>
+        <label>Nom de l'entreprise
+          <input type="text" name="company" placeholder="Ex : Studio M" required>
+        </label>
+        <label>Adresse mail
+          <input type="email" name="email" placeholder="contact@exemple.fr" required>
+        </label>
+        <label>Numéro de téléphone
+          <input type="tel" name="phone" placeholder="06 00 00 00 00" required>
+        </label>
+        <label>RIB
+          <input type="text" name="rib" placeholder="FR76 3000 6000 0112 3456 7890 189" required>
+        </label>
+        <label>Activité principale
+          <input type="text" name="activity" placeholder="Ex : Plomberie" required>
+        </label>
+        <label>Code postal
+          <input type="text" name="postal" inputmode="numeric" pattern="[0-9]{5}" placeholder="75011" required>
+        </label>
+        <label>Présentation de l'activité
+          <textarea name="description" rows="3" placeholder="Détaillez vos prestations, votre zone d'intervention..." required></textarea>
+        </label>
+      </div>
+
+      <div class="upload-grid">
+        <label>Logo de l'entreprise
+          <input type="file" name="logo" accept="image/*" required>
+        </label>
+        <label>Image 1
+          <input type="file" name="image1" accept="image/*" required>
+        </label>
+        <label>Image 2
+          <input type="file" name="image2" accept="image/*" required>
+        </label>
+        <label>Image 3
+          <input type="file" name="image3" accept="image/*" required>
+        </label>
+      </div>
+
+      <div class="form-actions">
+        <button type="submit">Publier mon annonce</button>
+        <p class="hint">Votre annonce affichera trois images, un logo et le nom de votre entreprise.</p>
+      </div>
+    </form>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>Déjà prêt ? <a href="index.html">Consultez les annonces publiées.</a></p>
+      <p class="small-print">Annuaire Pro · Facilitez la découverte des talents locaux.</p>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Annuaire en ligne - Accueil</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-container">
+      <div class="brand">Annuaire Pro</div>
+      <nav class="nav-links">
+        <a class="active" href="index.html">Accueil</a>
+        <a href="inscription.html">Inscription</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-content">
+        <div>
+          <p class="eyebrow">Trouver un professionnel</p>
+          <h1>Un annuaire clair pour vos besoins locaux</h1>
+          <p class="lead">Recherchez des entreprises autour de chez vous grâce au code postal et à l'activité.</p>
+          <form id="search-form" class="search-form" aria-label="Formulaire de recherche">
+            <label class="sr-only" for="postal">Code postal</label>
+            <input id="postal" name="postal" type="text" inputmode="numeric" pattern="[0-9]{5}" placeholder="Code postal" required>
+            <label class="sr-only" for="activity">Activité</label>
+            <input id="activity" name="activity" type="text" placeholder="Activité" required>
+            <button type="submit">Rechercher</button>
+          </form>
+          <p class="hint">Astuce : commencez par saisir les trois premiers chiffres de votre code postal.</p>
+        </div>
+        <div class="hero-card">
+          <p class="hero-card-title">Annonce en avant</p>
+          <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=600&q=80" alt="Exemple d'entreprise" class="hero-image">
+          <div class="hero-card-body">
+            <div class="company-logo" aria-hidden="true">AP</div>
+            <div>
+              <h3>Atelier Pivoine</h3>
+              <p>Création florale · 75011</p>
+              <p class="contact">contact@atelierpivoine.fr · 06 72 45 20 10</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="container results-section" aria-live="polite">
+      <div class="section-header">
+        <div>
+          <p class="eyebrow">Annonces</p>
+          <h2>Résultats</h2>
+        </div>
+        <p class="hint">Les annonces affichent trois images, un logo et le nom de l'entreprise.</p>
+      </div>
+      <div id="results" class="cards-grid"></div>
+      <template id="card-template">
+        <article class="card">
+          <div class="card-media">
+            <img class="logo" alt="Logo de l'entreprise">
+            <div class="gallery">
+              <img alt="Image 1">
+              <img alt="Image 2">
+              <img alt="Image 3">
+            </div>
+          </div>
+          <div class="card-body">
+            <h3 class="company-name"></h3>
+            <p class="meta"></p>
+            <p class="contact"></p>
+            <p class="description"></p>
+          </div>
+        </article>
+      </template>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>Vous êtes un professionnel ? <a href="inscription.html">Créez votre annonce en quelques minutes.</a></p>
+      <p class="small-print">Annuaire Pro · Facilitez la découverte des talents locaux.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

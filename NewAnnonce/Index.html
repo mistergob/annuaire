@@ -34,7 +34,31 @@ body{
   padding:0 28px;
   color:white;
 }
-.brand{display:flex;gap:10px;font-weight:700}
+.nav-left, .nav-right{display:flex; align-items:center; gap:22px}
+.brand{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  font-weight:700;
+  white-space:nowrap;
+}
+.brand .pin{width:18px; height:18px; fill:var(--red)}
+.brand span{color:white}
+.menu{display:flex; align-items:center; gap:18px; margin-left:18px}
+.menu a{
+  color:rgba(255,255,255,.85);
+  text-decoration:none;
+  font-weight:500;
+  font-size:14px;
+}
+.nav-right a{
+  color:rgba(255,255,255,.85);
+  text-decoration:none;
+  font-size:14px;
+  display:flex;
+  align-items:center;
+  gap:8px;
+}
 .container{
   width:min(1000px,92vw);
   margin:0 auto;
@@ -58,13 +82,24 @@ input, select, textarea{
 }
 textarea{min-height:100px;resize:vertical}
 .btn{
-  background:var(--red);
+  border:0;
+  background:transparent;
   color:white;
-  border:none;
+  font-weight:600;
+  font-size:13px;
+  padding:10px 14px;
+  border-radius:6px;
+  cursor:pointer;
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+}
+.btn-primary{
+  background:var(--red);
+  box-shadow:0 10px 25px rgba(229,57,53,.28);
   padding:12px 18px;
   border-radius:10px;
   font-weight:700;
-  cursor:pointer;
 }
 .grid{
   display:grid;
@@ -78,7 +113,32 @@ textarea{min-height:100px;resize:vertical}
 <body>
 <section class="hero">
   <header class="nav">
-    <div class="brand">Créer mon annonce</div>
+    <div class="nav-left">
+      <div class="brand">
+        <svg class="pin" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M12 2c-3.86 0-7 3.14-7 7 0 5.25 7 13 7 13s7-7.75 7-13c0-3.86-3.14-7-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/>
+        </svg>
+        <span>Accueil</span>
+      </div>
+
+      <nav class="menu" aria-label="Menu principal">
+        <a href="#">Les Prestations</a>
+        <a href="#">-</a>
+      </nav>
+    </div>
+    <div class="nav-right">
+      <a href="#">
+        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" style="fill:rgba(255,255,255,.85)">
+          <path d="M12 12a4 4 0 1 0-4-4 4 4 0 0 0 4 4zm0 2c-4.42 0-8 2-8 4.5V21h16v-2.5C20 16 16.42 14 12 14z"/>
+        </svg>
+        <span>Connexion</span>
+      </a>
+
+      <a class="btn btn-primary" href="Index.html">
+        <span aria-hidden="true">+</span>
+        <span>Annonce</span>
+      </a>
+    </div>
   </header>
 
   <main class="container">
@@ -153,7 +213,7 @@ textarea{min-height:100px;resize:vertical}
         </div>
 
         <br>
-        <button class="btn" type="submit">Publier mon annonce</button>
+        <button class="btn btn-primary" type="submit">Publier mon annonce</button>
 
       </form>
     </div>
